@@ -14,6 +14,7 @@ public partial class FormMain : Form
     static int columns;
     static string openFilePath;
     DataService ds = new DataService();
+
     public static string[,] LoadFromFileData(string filePath)
     {
         string FileData = File.ReadAllText(filePath);
@@ -42,7 +43,7 @@ public partial class FormMain : Form
     }
     private void textBoxMax_GDS_TextChanged(object sender, EventArgs e)
     {
-        // Обработка события здесь  
+          
     }
 
     private void FormMain_Load(object sender, EventArgs e)
@@ -230,7 +231,23 @@ public partial class FormMain : Form
 
     private void buttonEdit_GDS_Click(object sender, EventArgs e)
     {
+        try
+        {
+            int a = dataGridViewBase_GDS.CurrentRow.Index;
+            FormEdit fed = new FormEdit(this);
+            fed.textBoxEntranceEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[0].Value.ToString();
+            fed.textBoxFlatEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[1].Value.ToString();
+            fed.textBoxRoomsEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[2].Value.ToString();
+            fed.textBoxSquareEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[3].Value.ToString();
+            fed.textBoxKidsEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[4].Value.ToString();
+            fed.textBoxDebtEnter_GDS.Text = dataGridViewBase_GDS.Rows[a].Cells[5].Value.ToString();
 
+            fed.ShowDialog();
+        }
+        catch
+        {
+            MessageBox.Show("Ошибка при редактировании комплектующего", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     private void buttonMin_GDS_Click(object sender, EventArgs e)
@@ -289,34 +306,34 @@ public partial class FormMain : Form
 
     private void buttonFilter_GDS_Click(object sender, EventArgs e)
     {
-        string filterValue = comboBoxFilter_GDS.SelectedItem?.ToString(); // Безопасно получаем выбранный элемент  
+        string filterValue = comboBoxFilter_GDS.SelectedItem?.ToString();   
         foreach (DataGridViewRow row in dataGridViewBase_GDS.Rows)
         {
-            // Получаем значение ячейки, предполагая, что это числовое значение  
+             
             if (row.Cells[5].Value != null && int.TryParse(row.Cells[5].Value.ToString(), out int cellValue))
             {
-                // Если значение 0  
+                 
                 if (cellValue == 0)
                 {
-                    // Выводим одно значение (например, "Ничего")  
-                    row.Cells[5].Value = "Ничего"; // Или любое другое значение, которое вам нужно  
-                    row.Visible = true; // Отображаем строку  
+                    
+                    row.Cells[5].Value = "Нету"; 
+                    row.Visible = true; 
                 }
-                // Если значение больше 0  
+                 
                 else if (cellValue > 0)
                 {
-                    // Выводим другое значение (например, само значение)  
-                    row.Cells[5].Value = cellValue; // Для демонстрации, просто выводим исходное значение  
-                    row.Visible = true; // Отображаем строку  
+                      
+                    row.Cells[5].Value = cellValue;   
+                    row.Visible = true;   
                 }
                 else
                 {
-                    row.Visible = false; // Скрываем строку, если не подходит ни под одно условие  
+                    row.Visible = false;   
                 }
             }
             else
             {
-                row.Visible = false; // Если ячейка пустая, скрываем строку  
+                row.Visible = false;   
             }
         }
     }
@@ -341,6 +358,18 @@ public partial class FormMain : Form
     private void dataGridViewBase_GDS_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
 
+    }
+
+    private void buttonHelp_GDS_Click(object sender, EventArgs e)
+    {
+        FormHelp formHelp = new FormHelp();
+        formHelp.ShowDialog();
+    }
+
+    private void buttonAdd_GDS_Click(object sender, EventArgs e)
+    {
+        FormAdd formAdd = new FormAdd(this);
+        formAdd.ShowDialog();
     }
 }
 

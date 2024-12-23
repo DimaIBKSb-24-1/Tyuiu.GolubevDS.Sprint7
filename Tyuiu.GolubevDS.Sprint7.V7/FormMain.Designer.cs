@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxHelper_GDS = new GroupBox();
             buttonHelp_GDS = new Button();
             buttonSave_GDS = new Button();
@@ -97,6 +97,7 @@
             buttonHelp_GDS.Size = new Size(73, 54);
             buttonHelp_GDS.TabIndex = 2;
             buttonHelp_GDS.UseVisualStyleBackColor = true;
+            buttonHelp_GDS.Click += buttonHelp_GDS_Click;
             // 
             // buttonSave_GDS
             // 
@@ -390,6 +391,7 @@
             buttonAdd_GDS.Size = new Size(63, 48);
             buttonAdd_GDS.TabIndex = 1;
             buttonAdd_GDS.UseVisualStyleBackColor = true;
+            buttonAdd_GDS.Click += buttonAdd_GDS_Click;
             // 
             // buttonViewBase_GDS
             // 
@@ -403,16 +405,16 @@
             // 
             // chartGr_GDS
             // 
-            chartArea2.Name = "ChartArea1";
-            chartGr_GDS.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            chartGr_GDS.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chartGr_GDS.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartGr_GDS.Legends.Add(legend1);
             chartGr_GDS.Location = new Point(355, 520);
             chartGr_GDS.Name = "chartGr_GDS";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chartGr_GDS.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartGr_GDS.Series.Add(series1);
             chartGr_GDS.Size = new Size(950, 200);
             chartGr_GDS.TabIndex = 17;
             chartGr_GDS.Text = "chart1";
@@ -448,7 +450,7 @@
         private Button buttonHelp_GDS;
         private Button buttonSave_GDS;
         private Button buttonOpenBase_GDS;
-        private DataGridView dataGridViewBase_GDS;
+        public DataGridView dataGridViewBase_GDS;
         private Label label_GDS;
         private TextBox textBoxFind_GDS;
         private Button buttonFind_GDS;
