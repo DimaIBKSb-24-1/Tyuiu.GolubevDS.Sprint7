@@ -72,6 +72,7 @@
             textBoxInfo_GDS.TabIndex = 2;
             textBoxInfo_GDS.TabStop = false;
             textBoxInfo_GDS.Text = resources.GetString("textBoxInfo_GDS.Text");
+            textBoxInfo_GDS.TextChanged += textBoxInfo_GDS_TextChanged;
             // 
             // buttonClose_GDS
             // 

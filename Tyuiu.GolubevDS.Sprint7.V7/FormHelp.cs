@@ -26,5 +26,10 @@ namespace Tyuiu.GolubevDS.Sprint7.V7
         {
 
         }
+
+        private void textBoxInfo_GDS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

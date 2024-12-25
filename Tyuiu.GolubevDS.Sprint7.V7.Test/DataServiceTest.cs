@@ -18,11 +18,11 @@ public class DataServiceTest
             writer.WriteLine("5;6");
         }
 
-        // Вызовите метод для получения данных  
+        // Вызов метод для получения данных  
         string[,] res = ds.GetBase(pathSaveFile);
         string[,] wait = { { "1", "2" }, { "3", "4" }, { "5", "6" } };
 
-        // Сравните результаты  
+        // Сравнение результата  
         CollectionAssert.AreEqual(wait, res);
     }
 }

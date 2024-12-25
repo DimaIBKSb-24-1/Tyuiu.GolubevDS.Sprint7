@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{BBB269AE-DBE1-472A-B7DC-454302F48A6B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{BBB269AE-DBE1-472A-B7DC-454302F48A6B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.GolubevDS.Sprint7.V7.Test", "Tyuiu.GolubevDS.Sprint7.V7.Test\Tyuiu.GolubevDS.Sprint7.V7.Test.csproj", "{758618C3-8151-4B4A-9984-49C4314107E5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.GolubevDS.Sprint7.V7.Lib", "Tyuiu.GolubevDS.Sprint7.V7.Lib\Tyuiu.GolubevDS.Sprint7.V7.Lib.csproj", "{A6147AC3-AD3F-4B44-9BCF-BC85C36BD805}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.GolubevDS.Sprint7.V7", "Tyuiu.GolubevDS.Sprint7.V7\Tyuiu.GolubevDS.Sprint7.V7.csproj", "{9C615E69-268F-406A-8A50-4DBEB250B227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.GolubevDS.Sprint7.Project.V7", "Tyuiu.GolubevDS.Sprint7.V7\Tyuiu.GolubevDS.Sprint7.Project.V7.csproj", "{9C615E69-268F-406A-8A50-4DBEB250B227}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
